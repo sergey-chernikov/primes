@@ -8,6 +8,7 @@ This tool was written in pure C and is designed as a testbed for GMP (GNU MathPo
 * Occupy one or more CPUs with some work
 
 Input and output numbers can have any size (far exceed 2^64 and even 2^128), thanks to GMP library.
+Since it doesn't use the Sieve (of Eratosthenes) it consumes constant amount of memory and reads the PrimeDB in pages.
 
  <h2>Command-line help</h2>
  When started without arguments the tool starts or resumes the prime number generation into primes.bin file located in the current directory. PrimeDB (primes.bin format) is a compact format for holding primes in the unsigned long form (up to 2^64 - 1 on 64-bit architectures). It consumes less space on disk than Sieve of Eratosthenes (8 bits in one char).
