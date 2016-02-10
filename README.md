@@ -17,14 +17,14 @@ Preloaded 1000000 first primes from 2 to 15485863 (max value in PrimeDB = 280243
 2305843009213693951 is a Mersenne prime</pre>
 
 <code>  primes number /</code><br/>
-Factorizes <number> into divisors:
+Factorizes number into divisors:
 <pre>./primes 111111111111111111111111111111111111111111111111111111111111111111111111111111111111 /
 Preloaded 1000000 first primes from 2 to 15485863 (max value in PrimeDB = 28024330787)
 111111111111111111111111111111111111111111111111111111111111111111111111111111111111 = 3 * 7 * 11 * 13 * 29 * 37 * 43 * 101 * 127 * 239 * 281 * 1933 * 2689 * 4649 * 9901 * 226549 * 459691 * 909091 * 10838689 * 121499449 * 7 * 4458192223320340849
 22 divisors</pre>
 
 <code>  primes number +/-[num]</code><br/>
-Searches for num (or 1 if num not specified) primes forth and back from the <number>:
+Searches for num (or 1 if num not specified) primes forth and back from the number:
 <pre>time ./primes 590295810358705651713 +23
 Preloaded 1000000 first primes from 2 to 15485863 (max value in PrimeDB = 28048384121)
 Finding 23 prime[s] starting from 590295810358705651713
