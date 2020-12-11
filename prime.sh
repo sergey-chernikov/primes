@@ -1,6 +1,7 @@
 #!/bin/sh
 
-CC=gcc
+#CC=gcc
+CC=cc
 
 rm -f primes
 
