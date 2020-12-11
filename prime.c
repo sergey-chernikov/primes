@@ -66,7 +66,7 @@ void* thr_isPrime(void* data)
          }
       }
       if (found)  break;
-      vData->tbl_start = vData->page[nb_elems - 1] + 2;
+      vData->tbl_start = vData->page[nb_elems - 1] + 6;
       if (vData->tbl_start >= vData->tbl_end)  break;
    }
 
@@ -119,12 +119,12 @@ int isPrime(const mpz_t num, int progress)
       return result;
    }
 
-   PDBElem start = primes[nprimes - 1] + 2;
+   PDBElem start = primes[nprimes - 1] + 6;
    PDBElem tbl_step = tbl_max_val;
    if (mpz_cmp_ui(sqrt, tbl_step) < 0)  tbl_step = mpz_get_ui(sqrt);
    tbl_step = (tbl_step - start) / NCPU;
    mpz_t step, div;
-   mpz_init_set_ui(div, tbl_max_val + 2);
+   mpz_init_set_ui(div, tbl_max_val + 6);
    mpz_init_set(step, sqrt);
    mpz_sub(step, step, div);
    mpz_div_ui(step, step, NCPU);
@@ -223,6 +223,7 @@ void findWagstaffPrimesQ(unsigned long long num)
             mpz_out_str(stdout, 10, wNum);
             printf(" is also a Mersenne prime\n");
          }
+         count++;
       }
    }
 }
@@ -252,6 +253,7 @@ void findWagstaffPrimesB(unsigned long long num)
             mpz_out_str(stdout, 10, wNum);
             printf(" is also a Mersenne prime\n");
          }
+         count++;
       }
    }
 }
@@ -294,7 +296,7 @@ void factorize(const mpz_t num)
                fflush(stdout);
             }
          }
-         uistart = page[nb_elems - 1] + 2;
+         uistart = page[nb_elems - 1] + 6;
       }
       if (mpz_cmp_ui(n, 1) == 0)  break;
       if (isPrime(n, 0)) {

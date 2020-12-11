@@ -182,7 +182,7 @@ int pdb_is_prime(const PDBElem n)
 	if ((n % first_primes[i]) == 0)  return 0;
     }
 
-    PDBElem div = first_primes[n1primes-1] + 2;
+    PDBElem div = first_primes[n1primes-1] + 6;
     while (div < sqroot) {
 	if ((n % div) == 0)  return 0;
 	div += 2;
